@@ -101,7 +101,7 @@ while True:
 				GPIO.output(Compressor_Pin, 1)	
 
 		#Run fan to continue cooling for 5 min
-		if (Compressor_Time == 1):
+		if (Fan_Time == 1):
 			Fan_Status = False
 			cursor.execute("UPDATE Thermostats Set Fan_Status = %s WHERE Id = %s", (Fan_Status, loop))
 			GPIO.output(Fan_Pin, 1)
