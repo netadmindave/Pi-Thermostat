@@ -36,8 +36,8 @@ for loop in range(0, Num_AC_Units):
 		GPIO.output(Compressor_Pin, 1)
 		Fan_Status = False
 		Compressor_Status = False
-		Compressor_Time = 10
-		Fan_Time = 10
+		Compressor_Time = 180
+		Fan_Time = 180
 		cursor.execute("UPDATE Thermostats Set  Fan_Status = %s, Compressor_Status = %s, Compressor_Time = %s, Fan_Time = %s WHERE Id = %s", (Fan_Status, Compressor_Status, Compressor_Time, Fan_Time, loop))
 
 #sleep to make sure compressor is not killed on statup
